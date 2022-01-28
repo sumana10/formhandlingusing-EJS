@@ -11,15 +11,19 @@
 <body class="bg-dark text-white">
   <div class="container mt-4 col-4 col-offset-6">
     <h1 class="display-3">POST FORM</h1>
-    <form method="GET" action="/myget">
+    <form method="POST" action="/mypost" enctype="multipart/form-data">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="exampleInputEmail1" name="firstname"  aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="exampleInputPassword1">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="lastname">
+      </div>
+      <div class="mb-3">
+        <label for="Sample File" class="form-label">Sample File</label>
+        <input type="file" class="form-control" id="exampleInputPassword1" name="filename" multiple>
       </div>
       
       <button type="submit" class="btn btn-primary">Submit</button>
